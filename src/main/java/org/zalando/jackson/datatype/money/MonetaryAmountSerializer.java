@@ -83,4 +83,9 @@ final class MonetaryAmountSerializer extends StdSerializer<MonetaryAmount> {
         return format == null ? null : format.format(value);
     }
 
+    @Override
+    public boolean isUnwrappingSerializer() {
+        return true;
+    }
+
 }
